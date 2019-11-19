@@ -16,8 +16,8 @@ public class App {
 
     private static int N = 10; // количество точек
 
-    private static double a = -92.70999999999862, b = +92.70999999999862, m = 2, n = 3;
-
+   // private static double a = -92.70999999999862, b = +92.70999999999862, m = 2, n = 3;
+   private static double a = -1000000, b = 1000000, m = 2, n = 3;
 
     public static void main(String[] args){
 
@@ -30,7 +30,7 @@ public class App {
 //        haarExecuterHaar.calculeteWave();
 
 
-        Func func = (x)-> -28.0 * Math.sin(4.0 / (19.0 * PI) * x - 1) + 6.0 * Math.cos(1.0 / (40.0 * Math.sqrt(PI)) * x);
+        Func func = (x)-> -28.0 * Math.sin(4.0 / (19.0 * PI) * x - 1.0) + 6.0 * Math.cos(1.0 / (40.0 * Math.sqrt(PI)) * x);
 
         ExecuterDoG executer = new ExecuterDoG(func, a, b, m, n, accuracy);
 

@@ -1,9 +1,9 @@
 package com.vsu.data.wave;
 
-public class Haar implements Wave {
+public class Haar extends Wave {
 
     @Override
-    public double funcWeve(double x, int i, int j) {
+    public double calcWave(double x, int i, int j) {
         double del = Math.pow(2.0, i);
         double del2 = Math.pow(2.0, i + 1.0);
 
@@ -20,4 +20,10 @@ public class Haar implements Wave {
         }
         return 0;
     }
+
+    @Override
+    protected double funcWeve(double x) {
+        return x;
+    }
+
 }

@@ -45,7 +45,7 @@ public abstract class AbstractExecuter {
     }
 
     protected double calcIntegralCTwoDimensional(int i, int j){
-        UnivariateFunction f = (x0) -> this.func.value(x0) * this.matherWave.funcWeve(x0, i, j);
+        UnivariateFunction f = (x0) -> this.func.value(x0) * this.matherWave.calcWave(x0, i, j);
 
         return baseAbstractUnivariateIntegrator.integrate(MAX_EVAL, f, this.a, this.b);
     }

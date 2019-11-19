@@ -1,11 +1,11 @@
 package com.vsu.data.wave;
 
-public class DoG implements Wave {
+public class DoG extends Wave {
 
     @Override
-    public double funcWeve(double x, int i, int j) {
+    public double funcWeve(double x) {
 
-        double result = Math.exp(-(Math.pow(i, 2.0) + Math.pow(j, 2.0))/2.0) - 0.5 * Math.exp(-(Math.pow(i, 2.0) + Math.pow(j, 2.0))/8.0);
+        double result = Math.exp(-Math.pow(x, 2) / 2.0) - 0.5 * Math.exp(-Math.pow(x, 2.0) / 8.0);
 
         return result;
     }
